@@ -7,7 +7,7 @@ const app = express();
 require('dotenv').config()
 
 // App Config
-app.set('PORT', 3000 || process.env.PORT);
+const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
@@ -67,6 +67,6 @@ app.post("/send", (req, res) => {
 })
 
 
-app.listen(app.get('PORT'), () => {
-    console.log('Server is listening at ' + app.get('PORT'));
+app.listen(PORT, () => {
+    console.log('Server is listening at ' +PORT);
 })
