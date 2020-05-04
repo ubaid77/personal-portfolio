@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<% if(message && message.length>0){ %>
+    <h6 style="color: #D05F37;"><%= message %></h4>
+<% } %>
+
+<div class="container-fluid row text-content">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <h5 class="title">CONTACT ME</h5>
+    </div>
+    <div class="col-md-8">
+        <p>
+        <form action="/send" method="POST">
+            <input class="input" type="text" name="name" autocomplete="off" placeholder="Name" required>
+            <br>
+            <input class="input" type="email" name="email" autocomplete="off" placeholder="Email" required>
+            <br>
+            <textarea class="input" name="msg" cols="20" rows="10" placeholder="Message" style="height: auto;"></textarea>
+            <br>
+            <button type="submit">SEND</button>
+        </form>
+        </p>
+
+    </div>
+</div>
+
+<%- include('partials/footer') %>
