@@ -57,7 +57,7 @@ app.post("/send", (req, res) => {
     }
     transporter.sendMail(mailOptions, function (err, info) {
         if (err) {
-            req.flash('error','Something went wrong :(')
+            req.flash('error','Something went wrong :( Try Again or DM me at ubaidmohd.786@gmail.com')
             res.redirect("/contact")
         } else {
             req.flash('success','Message Sent!');
